@@ -89,31 +89,6 @@ void interrupt ISR_handle(void) {
 }
 
 /**
- * @fn void timer0_init(void)
- * @brief 
- * @param none
- * @return none
- */
-void timer0_init(void) {	
-	/* Enable TMR0 overflow interrupts */
-	T0IE = 1;
-	T0IF = 0;
-	/* Configure Timer0 as follows :
-     	 * 	- Use the internal instruction clock
-	 *	  as the source to the module
-	 *	- Assign the Prescaler to the TMR0
-	 * 	  Timer so that TMR0 increments at a 1:16
-	 * 	  ratio with the internal instruction clock */
-	OPTION_REG = 0b00000011;
-	TMR0 = 131;   // Set the TMR0 register to 131 to have 1ms overflow timer
-		      // Internal instruction cycle = 1 / [(Processor Frequency) / 4] = 1 / (8 MHz / 4) = 500nS
-		      // TMR0 overflow = Internal instruction cycle x 28 (we must count the zero) = 500nS x 256 = 128µS
-		      // resolution = 1ms / 500 ns = 2000
-		      // 2000 / prescaler = 2000 / 16 = 125
-		      // 256(FFh to 00h) - 125 = 131
-}
-
-/**
  * @fn void switches_init(void)
  * @brief
  * 
@@ -148,11 +123,11 @@ void main(void) {
 	RB7 = 0;
 	RB6 = 0;
 	uint16_t ui16_blink = 0;
-	uint8_t ui8_idx = 0;
+	//uint8_t ui8_idx = 0;
 	int8_t i8_ret = -1;
-	uint8_t ui8_frame_id = 0;
-	uint8_t ui8_frame_size = 0;
-	uint8_t ui8_value = 0;
+	//uint8_t ui8_frame_id = 0;
+	//uint8_t ui8_frame_size = 0;
+	//uint8_t ui8_value = 0;
 	
 	// initialise uart
 	uart_init();

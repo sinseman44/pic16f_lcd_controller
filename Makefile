@@ -8,9 +8,10 @@ HEADER_DIR = inc
 DOC_DIR = doc
 CFLAGS = -I$(HEADER_DIR)
 ERR_FILE = compilation.log
-EXEC = raspi_lcd_controller
+EXEC = raspi_servo_controller
 
 P_CODE_FILES = $(OBJECT_DIR)/alfano_pic_16f877a_serial.p1 \
+		   $(OBJECT_DIR)/pic16f876a_controller_servo.p1 \
 	       $(OBJECT_DIR)/pic16f876a_controller_i2c.p1 \
 	       $(OBJECT_DIR)/pic16f876a_controller_lcd.p1 \
 	       $(OBJECT_DIR)/pic16f876a_controller_fifo.p1 \

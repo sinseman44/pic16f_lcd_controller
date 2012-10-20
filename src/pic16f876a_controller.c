@@ -33,6 +33,7 @@
 
 #include "pic16f876a_controller_frame.h"
 #include "pic16f876a_controller_i2c.h"
+#include "pic16f876a_controller_servo.h"
 
 /*************************************************************************
  * Constante(s)
@@ -133,6 +134,9 @@ void main(void) {
 
 	// initialise lcd HW
 	frame_init();
+	
+	// initialise servo HW
+	servo_init();
 	
 	uart_printf("LCD 2x16 CONTROLLER TEST\n\0");
 	

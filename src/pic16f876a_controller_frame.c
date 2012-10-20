@@ -129,16 +129,12 @@ int8_t frame_decode_fifo(void) {
 	}
 	/* else nothing to do */
 
-	//~ uart_printf("id = 0x%x\n\0", ui8_frame_id);
-
 	i8_ret = fifo_get(&ui8_frame_size);
 	if(i8_ret != RET_FIFO_OK) {
 		frame_set_error(i8_ret);
 		return i8_ret;
 	}
 	/* else nothing to do */
-
-	//~ uart_printf("size = 0x%x\n\0", ui8_frame_size);
 
 	switch(ui8_frame_id) {
 		case CLEAR_DISPLAY:

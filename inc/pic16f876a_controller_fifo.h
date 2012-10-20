@@ -22,7 +22,7 @@
  * Constante(s)
  *************************************************************************/
 
-#define RET_FIFO_OK		0
+#define RET_FIFO_OK			 0
 #define RET_FIFO_NOK		-1
 #define RET_FIFO_EMPTY		-2
 
@@ -37,6 +37,9 @@
 /*************************************************************************
  * Variable(s)
  *************************************************************************/
+
+uint8_t *gpui8_read_buf = NULL;			/*!< Read pointer on the buffer */
+uint8_t *gpui8_write_buf = NULL;		/*!< Write pointer on the buffer */
 
 /*************************************************************************
  * Prototypes(s)

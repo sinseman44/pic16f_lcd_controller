@@ -123,12 +123,8 @@ void main(void) {
 	RB7 = 0;
 	RB6 = 0;
 	uint16_t ui16_blink = 0;
-	//uint8_t ui8_idx = 0;
 	int8_t i8_ret = -1;
-	//uint8_t ui8_frame_id = 0;
-	//uint8_t ui8_frame_size = 0;
-	//uint8_t ui8_value = 0;
-	
+
 	// initialise uart
 	uart_init();
 
@@ -149,26 +145,7 @@ void main(void) {
 	while(1) {
 		// test if frames are in the buffer
 		if(gui8_token != 0) {
-			
-			//~ fifo_get(&ui8_frame_id);
-			//~ fifo_get(&ui8_frame_size);
-			//~ uart_printf("------\n\0");
-			//~ uart_printf("id = 0x%x\n\0", ui8_frame_id);
-			//~ uart_printf("size = 0x%x\n\0", ui8_frame_size);
-			//~ 
-			//~ for(ui8_idx = 0; ui8_idx < (ui8_frame_size - 2); ui8_idx ++) {
-				//~ fifo_get(&ui8_value);
-				//~ uart_printf("value = 0x%x\n\0", ui8_value);
-			//~ }
-			
-			//~ uart_printf("read pointer = 0x%x\n\0", gpui8_read_buf);
-			//~ uart_printf("write pointer = 0x%x\n\0", gpui8_write_buf);
-			
 			i8_ret = frame_decode_fifo(); // decode frame and execute actions
-			/*if(i8_ret != RET_OK) {
-				return;
-			}*/
-			//~ uart_printf("gui8_token = %d\n\0", gui8_token);
 			gui8_token --; // decrease number of frames in the buffer
 		}
 		/* else nothing to do */

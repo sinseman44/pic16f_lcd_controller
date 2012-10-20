@@ -92,12 +92,6 @@ void interrupt ISR_handle(void) {
  * @fn void switches_init(void)
  * @brief
  * 
- * RB0/INT => RTC square signal
- * 
- * put RB0 as input
- * Activate All RB pullup internal resistors to avoid use external pullup
- * Activate RB0 external interrupt 
- * 
  * @param none
  * @return none
  */

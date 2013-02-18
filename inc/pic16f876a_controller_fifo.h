@@ -16,7 +16,7 @@
  *************************************************************************/
 
 #include "pic16f876a_controller_include.h"
-#include "alfano_pic_16f877a_serial.h"
+//~ #include "alfano_pic_16f877a_serial.h"
 
 /*************************************************************************
  * Constante(s)

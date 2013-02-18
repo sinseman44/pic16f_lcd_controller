@@ -120,7 +120,7 @@ void main(void) {
 	int8_t i8_ret = -1;
 
 	// initialise uart
-	uart_init();
+	//~ uart_init();
 
 	// initialise Fifo	
 	fifo_init();
@@ -134,7 +134,7 @@ void main(void) {
 	// initialise lcd HW
 	frame_init();
 	
-	uart_printf("LCD 2x16 CONTROLLER TEST\n\0");
+	//~ uart_printf("LCD 2x16 CONTROLLER TEST\n\0");
 	
 	while(1) {
 		// test if frames are in the buffer

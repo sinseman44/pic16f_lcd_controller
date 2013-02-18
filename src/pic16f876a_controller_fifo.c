@@ -64,7 +64,7 @@ void fifo_init(void) {
 	gpui8_write_buf = &gpui8_buffer[0];
 	gb_flag_cur_state_buf = BUFFER_STAT_EMPTY;
 	
-	uart_printf("START pointer = 0x%x\n\0", gpui8_read_buf);
+	//~ uart_printf("START pointer = 0x%x\n\0", gpui8_read_buf);
 	return;
 }
 

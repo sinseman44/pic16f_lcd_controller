@@ -378,13 +378,13 @@ int8_t lcd_set_logo_m2g(void) {
 	int8_t i8_ret = 0;
 	
 	lcd_set_cursor(1, 1);
-	i8_ret = lcd_put_string(9, "      M2G");
+	i8_ret = lcd_put_string(13, "  COLOC'S BAR");
 	if(i8_ret == RET_NOK){
 		return i8_ret;
 	}
 	/* else nothing to do */
 	lcd_set_cursor(2, 1); 
-	i8_ret = lcd_put_string(14, "  PERFORMANCES");
+	i8_ret = lcd_put_string(14, "  RASPBERRY PI");
 	if(i8_ret == RET_NOK){
 		return i8_ret;
 	}
@@ -480,5 +480,7 @@ int8_t lcd_init(void) {
 
 	// erase display
 	lcd_clear_display();
+	
+	lcd_set_logo_m2g();
 	return i8_ret;
 }
